@@ -1,0 +1,30 @@
+<nav class="w3-sidebar w3-bar-block w3-white w3-collapse w3-top" style="z-index:3;width:250px" id="mySidebar">
+  <div class="w3-container w3-display-container w3-padding-16">
+    <i onclick="w3_close()" class="fa fa-remove w3-hide-large w3-button w3-display-topright"></i>
+    <a href="#" routerLink="/home" class="w3-bar-item w3-button"><h3 class="w3-wide"><b>LOGO</b></h3></a>
+    
+    <br><br><br>
+  </div>
+  <div class="w3-padding-45 w3-large w3-text-grey" style="font-weight:medium">
+    <a href="#" routerLink="add" class="w3-bar-item w3-button">Jeans</a>
+   
+  </div>
+  <a href="#footer"  class="w3-bar-item w3-button w3-padding">Subscribe</a> -->
+</nav>
+
+<form #i="ngForm" (ngSubmit)="AddProduct(i)" action="" style="color:#bdbdbd; margin-bottom:100px;">
+  <label class="col-md-offset-3" for="">Nama</label> <br>
+   <input name="Nama" class="col-md-offset-3 col-md-6 noborder inputtype" type="text" ngModel><br><br>
+   <label class="col-md-offset-3" for="">Harga</label> <br>
+   <input name="Harga" class="col-md-offset-3 col-md-6 noborder inputtype" type="number" ngModel><br><br>
+   <label class="col-md-offset-3" for="">Kategori</label> <br>
+   <input name="Kategori"class="col-md-offset-3 col-md-6 noborder inputtype" type="text" ngModel><br><br>
+   <label class="col-md-offset-3" for="">Gambar</label> <br><br>
+
+   <input class="inputfile col-md-offset-3" id="Gambar"style="" name="Gambar" (change)="fileChange($event)" type="file" multiple >
+   
+   <!-- <label for="Gambar" >Choose a file</label> -->
+
+     <button class="col-md-offset-8">Cancel</button>
+     <button type="submit" >Submit</button>
+ </form>
